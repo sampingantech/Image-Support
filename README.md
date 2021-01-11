@@ -16,17 +16,28 @@ allprojects {
 ```  
 Download via Gradle:  
 ```  
-implementation 'com.github.sampingantech:Image-Support:1.1.0'  
+implementation 'com.github.sampingantech:Image-Support:1.1.1'
 ```  
-or Maven:  
-```  
-<dependency>  
-  <groupId>com.github.nikartm</groupId>  
-  <artifactId>image-support</artifactId>  
-  <version>1.0.5</version>  
-  <type>pom</type>  
-</dependency>  
-```  
+or Maven:
+Add the JitPack repository to your build file
+```
+<repositories>
+	<repository>
+		<id>jitpack.io</id>
+		<url>https://jitpack.io</url>
+	</repository>
+</repositories>
+```
+
+```
+<dependency>
+	<groupId>com.github.sampingantech</groupId>
+	<artifactId>Image-Support</artifactId>
+	<version>1.1.1</version>
+	<type>pom</type>
+</dependency>
+```
+
 ## Screenshots  
 ![BarcodeInfo Screenshots](https://raw.githubusercontent.com/nikartm/Image-Support/master/screenshots/sct_1.png)  
 ## How to use?  
