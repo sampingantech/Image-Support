@@ -5,15 +5,16 @@ Library to add ImageView (ImageBadgeView) with a badge like notification count.
 ## Download
 Add to gradle root:
 ```
-buildscript {
-    repositories {
-        jcenter()
-    }
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
 }
 ```
 Download via Gradle:
 ```
-implementation 'com.github.nikartm:image-support:1.0.5'
+implementation 'com.github.sampingantech:Image-Support:1.1.0'
 ```
 or Maven:
 ```
