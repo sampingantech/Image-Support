@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.panpf.bintray-publish'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 30
@@ -37,17 +37,9 @@ if (JavaVersion.current().isJava8Compatible()) {
     }
 }
 
-// todo: will update this lib to sampingantech jcenter
-publish {
-    userOrg = 'nikart'
-    groupId = 'com.github.nikartm'
-    artifactId = 'image-support'
-    publishVersion = '1.1.0'
-    desc = 'Library to add ImageView (ImageBadgeView) with a badge like notification count'
-    licences = ['Apache-2.0']
-    uploadName='ImageBadgeView'
-    website = 'https://github.com/nikartm/Image-Support'
-}
+group = "com.github.sampingantech"
+version = android.defaultConfig.versionName
+archivesBaseName = 'image-support'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
