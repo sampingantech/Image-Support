@@ -16,7 +16,7 @@ allprojects {
 ```  
 Download via Gradle:  
 ```  
-implementation 'com.github.sampingantech:Image-Support:1.1.1'
+implementation 'com.github.sampingantech:Image-Support:1.1.2'
 ```  
 or Maven:
 Add the JitPack repository to your build file
@@ -33,7 +33,7 @@ Add the JitPack repository to your build file
 <dependency>
 	<groupId>com.github.sampingantech</groupId>
 	<artifactId>Image-Support</artifactId>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 	<type>pom</type>
 </dependency>
 ```
