@@ -37,6 +37,7 @@ if (JavaVersion.current().isJava8Compatible()) {
     }
 }
 
+// todo: will update this lib to sampingantech jcenter
 publish {
     userOrg = 'nikart'
     groupId = 'com.github.nikartm'
