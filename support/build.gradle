@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+apply plugin: 'com.github.panpf.bintray-publish'
 
 android {
     compileSdkVersion 30
@@ -18,11 +18,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 allprojects {
     tasks.withType(Javadoc).all { enabled = false }
 }
+
 if (JavaVersion.current().isJava8Compatible()) {
     allprojects {
         tasks.withType(Javadoc) {
@@ -31,11 +37,12 @@ if (JavaVersion.current().isJava8Compatible()) {
     }
 }
 
+// todo: will update this lib to sampingantech jcenter
 publish {
     userOrg = 'nikart'
     groupId = 'com.github.nikartm'
     artifactId = 'image-support'
-    publishVersion = '1.0.5'
+    publishVersion = '1.1.0'
     desc = 'Library to add ImageView (ImageBadgeView) with a badge like notification count'
     licences = ['Apache-2.0']
     uploadName='ImageBadgeView'
@@ -45,6 +52,9 @@ publish {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
     testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
 }
